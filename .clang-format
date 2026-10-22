@@ -1,0 +1,22 @@
+BasedOnStyle: LLVM
+
+IndentWidth: 4
+ContinuationIndentWidth: 4
+UseTab: Never
+
+SortIncludes: CaseSensitive
+IncludeBlocks: Preserve
+
+ColumnLimit: 0
+BreakTemplateDeclarations: Leave
+SeparateDefinitionBlocks: Leave
+ReflowComments: false
+
+AllowShortIfStatementsOnASingleLine: AllIfsAndElse
+AllowShortLoopsOnASingleLine: true
+AllowShortBlocksOnASingleLine: Always
+AllowShortFunctionsOnASingleLine: All
+AllowShortLambdasOnASingleLine: All
+AllowShortCaseLabelsOnASingleLine: true
+
+SkipMacroDefinitionBody: true
