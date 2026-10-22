@@ -8,5 +8,5 @@
 
 ## License
 
-本リポジトリは [Unlicense](LICENSE.md) の下で公開されています。
+本リポジトリは [Unlicense](LICENSE) の下で公開されています。
 
