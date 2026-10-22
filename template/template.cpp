@@ -1,3 +1,7 @@
+/*
+templates and libraries are available at: https://github.com/add-nine/cplib-cpp
+*/
+
 #ifndef ADDNINE
 #define ADDNINE
 #include __FILE__
