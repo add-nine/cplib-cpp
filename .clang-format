@@ -20,3 +20,5 @@ AllowShortLambdasOnASingleLine: All
 AllowShortCaseLabelsOnASingleLine: true
 
 SkipMacroDefinitionBody: true
+
+ReferenceAlignment: Left
