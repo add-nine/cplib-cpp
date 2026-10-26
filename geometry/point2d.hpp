@@ -35,7 +35,7 @@ struct Point {
     constexpr Calc<T> norm2() const {
         return Calc<T>(x) * x + Calc<T>(y) * y;
     }
-    constexpr T rot90(bool ccw = true) const {
+    constexpr Point rot90(bool ccw = true) const {
         return (ccw ? Point(-y, x) : Point(y, -x));
     }
 
