@@ -62,15 +62,25 @@ class IntervalSet {
         return cover(x) != end();
     }
 
+    const_iterator intersect(T l, T r) const {
+        assert(l <= r);
+        if (l == r) {
+            return end();
+        }
+        auto it = intervals.lower_bound(l);
+        if (it != begin() && std::prev(it)->second > l) {
+            return std::prev(it);
+        }
+        return it != end() && it->first < r ? it : end();
+    }
+
     U insert(T l, T r) {
         assert(l <= r);
         if (l == r) return 0;
-
         auto it = intervals.lower_bound(l);
         if (it != intervals.begin() && std::prev(it)->second >= l) {
             it = std::prev(it);
         }
-
         U covered = 0;
         while (it != intervals.end() && it->first <= r) {
             l = std::min(l, it->first);
@@ -78,7 +88,6 @@ class IntervalSet {
             covered += length(it->first, it->second);
             it = intervals.erase(it);
         }
-
         intervals.emplace_hint(it, l, r);
         U added = length(l, r) - covered;
         sum += added;
