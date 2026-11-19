@@ -70,3 +70,10 @@ struct argless {
         return cross(a, b) > 0;
     }
 };
+
+struct arggreater {
+    template <Arithmetic T>
+    constexpr bool operator()(const Point<T>& a, const Point<T>& b) const {
+        return argless{}(b, a);
+    }
+};
